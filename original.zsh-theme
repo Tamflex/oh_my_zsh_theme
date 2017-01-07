@@ -1,4 +1,4 @@
-# http://www.nparikh.org/unix/prompt.php 
+# http://www.nparikh.org/unix/prompt.php
 # daveverwer + flazz + robbyrussell
 
 if [ "$USER" = "root" ]
@@ -8,8 +8,8 @@ fi
 
 local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
-PROMPT="%{$fg_bold[white]%}%m%{$reset_color%} %{$fg_bold[magenta]%}::%{$reset_color%} \
-%{$fg_bold[green]%}%1~ $(git_prompt_info)%{${fg_bold[$CARETCOLOR]}%}%#%{${reset_color}%} "
+PROMPT='%{$fg_bold[white]%}%m%{$reset_color%} %{$fg_bold[magenta]%}::%{$reset_color%} \
+%{$fg_bold[green]%}%1~ $(git_prompt_info)%{${fg_bold[$CARETCOLOR]}%}%#%{${reset_color}%} '
 
 RPS1="$(vi_mode_prompt_info) ${return_code}"
 
