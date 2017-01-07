@@ -1,1 +1,1 @@
-theme/original="themes/original"
+ZSH_THEME="themes/original"
