@@ -9,8 +9,10 @@ fi
 local return_code="%(?..%{$fg_bold[red]%}%? ↵%{$reset_color%})"
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 
-PROMPT='%{$fg_bold[$CARETCOLOR]%}%m%{$reset_color%} %{$fg_bold[magenta]%}::%{$reset_color%} \
-$ret_status %{$fg_bold[cyan]%}%1c %{$reset_color%}$(git_prompt_info)'
+local git_branch='$(git_prompt_info)%{$reset_color%}$(git_prompt_status)%{$reset_color%}'
+
+PROMPT="%{$fg_bold[$CARETCOLOR]%}%m%{$reset_color%} %{$fg_bold[magenta]%}::%{$reset_color%} \
+$ret_status %{$fg_bold[cyan]%}%1c %{$reset_color%}${git_branch} "
 
 RPS1='$(vi_mode_prompt_info) ${return_code}'
 
